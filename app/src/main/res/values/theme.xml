@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="QMUI.Compat.NoActionBar">
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">@color/qmui_config_color_transparent</item>
+    </style>
+
+    <style name="QMUI.TipDialog" parent="QMUI.Dialog" />
+
+</resources>

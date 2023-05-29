@@ -1,0 +1,107 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    namespace 'io.github.zkit'
+    compileSdk libs.versions.compileSdk.get().toInteger()
+
+    defaultConfig {
+        applicationId "io.github.zkit"
+        minSdk libs.versions.minSdk.get().toInteger()
+        targetSdk libs.versions.compileSdk.get().toInteger()
+        versionCode 1
+        versionName "1.0.0"
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding false
+    }
+    signingConfigs {
+        debug {
+            keyAlias 'debug'
+            keyPassword '1234567890'
+            storePassword '1234567890'
+            storeFile file('app.keystore')
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        release {
+            keyAlias 'release'
+            keyPassword getLocalPropertiesBuildReleasePassword()
+            storePassword '1234567890'
+            storeFile file('app.keystore')
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        release {
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro', 'proguard-log.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+
+    // androidx
+    implementation libs.androidx.core
+    implementation libs.androidx.appcompat
+    implementation libs.androidx.material
+    implementation libs.androidx.refresh
+
+    // kotlin
+    implementation libs.kotlin.coroutines
+    implementation libs.kotlin.extension
+
+    // bundles
+    implementation libs.bundles.slf4j
+    implementation libs.bundles.koin
+    implementation libs.bundles.okhttp
+    implementation libs.bundles.retrofit
+    implementation libs.bundles.camera
+    implementation libs.bundles.room
+    implementation libs.bundles.center
+
+    // qmui
+    implementation libs.qmui.core
+    implementation libs.qmui.arch
+
+    // commons
+    implementation libs.common.glide
+    implementation libs.common.gson
+    implementation libs.common.guava
+    implementation libs.common.lang
+    implementation libs.common.oaid
+    implementation libs.common.io
+    implementation libs.common.zip
+    implementation libs.common.live
+    implementation libs.common.yaml
+    implementation libs.common.lua
+
+    // widget
+    implementation libs.widget.toasty
+    implementation libs.widget.recycler
+    implementation libs.widget.markdown.core
+    implementation libs.widget.markdown.table
+
+}

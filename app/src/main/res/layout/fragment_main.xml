@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    app:qmui_skin_background="?attr/skin_fragment_background"
+    tools:context="io.github.zkit.ui.fragments.FragmentMain">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        android:outlineProvider="none">
+
+        <io.github.zkit.ui.widgets.QMUICollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:expandedTitleMarginEnd="60dp"
+            app:expandedTitleMarginStart="16dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:qmui_skin_text_color="?attr/qmui_skin_support_topbar_title_color"
+            app:title="首页">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:background="@android:color/transparent" />
+
+            <io.github.zkit.ui.widgets.QMUIMaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:paddingStart="0dp"
+                android:paddingEnd="16dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:contentInsetStartWithNavigation="0dp"
+                app:layout_collapseMode="pin"
+                app:qmui_skin_text_color="?attr/qmui_skin_support_topbar_title_color" />
+
+        </io.github.zkit.ui.widgets.QMUICollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_reload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="重新加载" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_watermark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

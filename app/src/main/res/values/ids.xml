@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="view_tag_param_1" type="id" />
+
+    <item name="custom_time" type="id" />
+    <item name="custom_address" type="id" />
+    <item name="custom_weather" type="id" />
+    <item name="custom_temperature" type="id" />
+    <item name="custom_location" type="id" />
+    <item name="custom_remark" type="id" />
+</resources>

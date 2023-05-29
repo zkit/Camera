@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="skin_fragment_background" format="color|reference" />
+
+    <attr name="skin_text_color_first" format="color|reference" />
+    <attr name="skin_text_color_second" format="color|reference" />
+    <attr name="skin_text_color_third" format="color|reference" />
+    <attr name="skin_text_color_fourth" format="color|reference" />
+    <attr name="skin_text_color_url" format="color|reference" />
+
+    <attr name="app_button_normal_text_color" format="color|reference" />
+    <attr name="app_button_confirm_text_color" format="color|reference" />
+    <attr name="app_button_normal_background" format="color|reference" />
+    <attr name="app_button_confirm_background" format="color|reference" />
+
+    <attr name="app_list_background_top" format="color|reference" />
+    <attr name="app_list_background_middle" format="color|reference" />
+    <attr name="app_list_background_bottom" format="color|reference" />
+    <attr name="app_list_background_single" format="color|reference" />
+
+    <attr name="app_skin_dialog_background" format="color|reference" />
+    <attr name="app_skin_dialog_divider" format="color|reference" />
+    <attr name="app_skin_dialog_button_background" format="color|reference" />
+    <attr name="app_skin_dialog_button_text" format="color|reference" />
+
+    <attr name="app_dialog_input_edittext_background" format="color|reference" />
+    <attr name="app_dialog_input_edittext_hint" format="color|reference" />
+    <attr name="app_dialog_input_edittext_text" format="color|reference" />
+    <attr name="app_dialog_input_content_background" format="color|reference" />
+
+</resources>
